@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #2e3440;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    background: #eceff4;
+    width: 400px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: #4c566a;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background: #d8dee9;
+}
+
+.chat-message {
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: #88c0d0;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 10px;
+    background: #e5e9f0;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#send-btn {
+    margin-left: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+    background-color: #5e81ac;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: #81a1c1;
+}
+
+.typing-status {
+    font-style: italic;
+    color: #5e81ac;
+    padding-left: 10px;
+    margin-top: 2px;
+}
+
+#clear-history-btn {
+    margin-left: auto;
+    background: #bf616a;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#clear-history-btn:hover {
+    background: #d08770;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 200px;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}

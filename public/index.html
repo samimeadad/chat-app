@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat App Enhanced</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="chat-container">
+            <div class="chat-header">
+                <select id="room-select">
+                    <option value="general">#general</option>
+                    <option value="tech">#tech</option>
+                    <option value="fun">#fun</option>
+                </select>
+                <span id="username-display"></span>
+                <button id="clear-history-btn">🗑 Clear</button>
+            </div>
+
+            <div id="chat-box" class="chat-box"></div>
+            <div id="typing-status" class="typing-status"></div>
+            <div class="chat-input-area">
+                <input type="text" id="message-input" placeholder="Type a message...">
+                <button id="send-btn">Send</button>
+            </div>
+
+            <!-- Export/Import Buttons -->
+            <div class="chat-controls" style="padding: 10px; text-align: center;">
+                <button id="export-btn">Export Chat</button>
+                <button id="import-btn">Import Chat</button>
+                <input type="file" id="import-file" style="display: none;" accept="application/json" />
+            </div>
+
+            <!-- Toast notification -->
+            <div id="toast" class="toast"></div>
+
+        </div>
+
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>
